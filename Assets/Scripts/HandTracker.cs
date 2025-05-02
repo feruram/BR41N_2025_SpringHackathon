@@ -24,7 +24,9 @@ public class HandTracker : MonoBehaviour
     }
     void OnTriggerStay(Collider other)
     {
-        flag=false;
-        Debug.Log("stay");
+        if(other.gameObject.tag!="weapon"&&other.gameObject.tag!="player"){
+            flag=false;
+        }
+        
     }
 }
